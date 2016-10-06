@@ -18,11 +18,13 @@ public class PullController : MonoBehaviour {
             isPulling = false;
             pulledObject = null;
         }
+    }
 
+    void FixedUpdate() {
         updatePulledObject();
     }
 
-    void OnCollisionEnter2D(Collision2D col) {
+    void OnCollisionStay2D(Collision2D col) {
         if (col.gameObject.tag == "interactive" && Input.GetButton("Fire1") && !isPulling) {
             pulledObject = col.gameObject;
             isPulling = true;
