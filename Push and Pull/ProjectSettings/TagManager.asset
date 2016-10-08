@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - interactive
+  - Pull
+  - yellowGate
+  - redGate
+  - Push
   layers:
   - Default
   - TransparentFX
