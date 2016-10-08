@@ -19,12 +19,14 @@ namespace UnityStandardAssets._2D
         }
 
 
-        private void Update()
-        {
-            if (!m_Jump)
-            {
+        private void Update() {
+            if (!m_Jump) {
                 // Read the jump input in Update so button presses aren't missed.
                 m_Jump = CrossPlatformInputManager.GetButtonDown(jumpAxis);
+            }
+
+            if (Input.GetButtonDown(jumpAxis)) {
+                GetComponent<AudioSource>().Play();
             }
         }
 
